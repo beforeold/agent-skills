@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS Logo Generator"
+  short_description: "Generate polished iOS app logo concepts"
+  default_prompt: "Use $ios-logo-generator to generate an iOS app logo for my app."
