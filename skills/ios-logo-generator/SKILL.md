@@ -9,7 +9,7 @@ description: Generate polished iOS app logo concepts with a GPT image model. Use
 
 Clarify only when a missing detail would materially change the logo direction. Otherwise infer from the app name, category, audience, existing brand cues, screenshots, or repo context.
 
-Use the image generation capability to create a bitmap logo concept. Prefer a single strong app-icon composition over a collage or marketing illustration.
+Use the image generation capability to create a bitmap logo concept. Default to a simple, iconic, low-detail mark with one primary metaphor. Prefer a single strong app-icon composition over a collage, mascot scene, or marketing illustration.
 
 ## Prompt Shape
 
@@ -18,6 +18,7 @@ Build the generation prompt with these parts:
 - App identity: app name, category, audience, and core metaphor.
 - Icon format: centered symbol, square canvas, no rounded-corner mask baked into the art.
 - Visual style: modern iOS app icon, simple silhouette, high contrast, polished material or flat vector-like rendering.
+- Simplicity: minimal geometry, few colors, broad shapes, no fine linework, no dense texture, no decorative extras.
 - Constraints: no tiny text, no UI screenshots, no device mockups, no App Store badge, no cluttered background.
 - Output target: suitable for downscaling to 1024, 180, 120, and 60 px.
 
@@ -34,7 +35,7 @@ After generation, inspect the result against these criteria:
 - Details are broad enough to survive iOS downscaling.
 - The design still works when iOS applies the rounded rectangle mask.
 
-If the generated image fails one of these checks, iterate with a tighter prompt instead of delivering the weak result.
+If the generated image fails one of these checks, or if it feels too detailed for a logo, iterate with a tighter prompt that explicitly removes small details and reduces the concept to one symbol.
 
 ## Delivery
 
