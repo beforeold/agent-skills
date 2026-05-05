@@ -1,4 +1,4 @@
-# bo-skills
+# agent-skills
 
 Personal Codex skills and installation helpers.
 
@@ -25,4 +25,3 @@ From this repository:
 ```
 
 The script is idempotent. Re-run it after adding or renaming a skill.
-
